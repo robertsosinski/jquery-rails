@@ -27,9 +27,9 @@
  */
 (function($) {
   // ensure all ajax requests are of js format
-  jQuery.ajaxSetup({  
+  $.ajaxSetup({  
     beforeSend: function (xhr) {
-      xhr.setRequestHeader("Accept", "text/javascript")
+      xhr.setRequestHeader("Accept", "text/javascript");
     }  
   }); 
 
@@ -43,7 +43,7 @@
       if (!/^(get|post)$/i.test(settings.type)) {
         settings.data = settings.data || "";
 
-        if (typeof settings.data != "string") {
+        if (typeof settings.data !== "string") {
           settings.data = $.param(settings.data);
         }
 
