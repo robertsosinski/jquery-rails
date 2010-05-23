@@ -31,10 +31,9 @@ You can also use the additional shorthand methods, `$.put` and `$.delete_`.
 NOTE: jQuery-Rails uses "delete_" with a trailing underscore as "delete" is a 
 reserved word in JavaScript, and its usage fails on certain browsers.
 
-    $.delete_("fruits/123", function(message) {
+    $.delete_("fruits/123", {"c": "cherry"}, function(message) {
       alert(message);
     });
-
 
 And jQuery will format a POST request with _method set as "delete".
 
